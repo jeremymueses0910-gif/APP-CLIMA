@@ -1,0 +1,27 @@
+:root {
+    --bg-dark: #050a18;
+    --neon-cyan: #00f2ff;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+body {
+    background-color: var(--bg-dark);
+    background-image: radial-gradient(circle at 20% 30%, #0a1931 0%, transparent 40%),
+                      radial-gradient(circle at 80% 70%, #051622 0%, transparent 40%);
+    color: white; font-family: 'Inter', sans-serif; min-height: 100vh; overflow: hidden;
+}
+.neon-title { font-weight: 800; letter-spacing: 5px; text-shadow: 0 0 10px var(--neon-cyan); }
+.neon-blue { color: var(--neon-cyan); }
+.search-container { width: 100%; max-width: 400px; }
+.form-control { background: var(--glass) !important; border: 1px solid var(--neon-cyan); color: white !important; border-radius: 15px 0 0 15px !important; }
+.btn-neon { border: 1px solid var(--neon-cyan); color: var(--neon-cyan); border-radius: 0 15px 15px 0 !important; }
+.btn-neon:hover { background: var(--neon-cyan); color: black; box-shadow: 0 0 20px var(--neon-cyan); }
+.weather-card {
+    background: var(--glass); backdrop-filter: blur(15px); border-radius: 30px; padding: 2.5rem;
+    width: 100%; max-width: 400px; border: 1px solid rgba(255,255,255,0.1);
+    animation: slideUp 0.5s ease-out; position: relative;
+}
+.btn-close-neon { position: absolute; top: 10px; right: 20px; background: none; border: none; color: white; font-size: 2rem; }
+.main-icon { width: 120px; filter: drop-shadow(0 0 10px var(--neon-cyan)); }
+.temp-display { font-size: 4rem; font-weight: 800; }
+.info-grid { background: rgba(0,0,0,0.3); border-radius: 20px; padding: 15px; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }

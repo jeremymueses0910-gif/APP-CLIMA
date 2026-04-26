@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKYCAST | Neon Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container d-flex flex-column align-items-center justify-content-center min-vh-100">
+        <div class="search-container mb-4 text-center">
+            <h1 class="neon-title mb-4">SKY<span class="neon-blue">CAST</span></h1>
+            <div class="input-group">
+                <input type="text" id="cityInput" class="form-control" placeholder="Ej: Madrid, Tokio..." autocomplete="off">
+                <button class="btn btn-neon" id="searchBtn"><i class="bi bi-search"></i></button>
+            </div>
+        </div>
+
+        <div id="loader" class="spinner-border text-info d-none my-3"></div>
+        <div id="errorMsg" class="alert alert-danger d-none bg-transparent border-danger text-danger">Ciudad no encontrada</div>
+
+        <div id="weatherCard" class="weather-card d-none">
+            <button id="closeBtn" class="btn-close-neon">&times;</button>
+            <div class="text-center">
+                <h2 id="cityName" class="city-name">---</h2>
+                <p id="date" class="small opacity-75"></p>
+                <img id="weatherIcon" src="" class="main-icon">
+                <h3 id="temp" class="temp-display">0°C</h3>
+                <p id="description" class="weather-desc">---</p>
+            </div>
+            <div class="row info-grid mt-4">
+                <div class="col-6 text-center border-end border-secondary">
+                    <i class="bi bi-droplets-fill text-info"></i>
+                    <p class="mb-0 small">Humedad</p>
+                    <span id="humidity" class="fw-bold fs-5">0%</span>
+                </div>
+                <div class="col-6 text-center">
+                    <i class="bi bi-wind text-info"></i>
+                    <p class="mb-0 small">Viento</p>
+                    <span id="wind" class="fw-bold fs-5">0 km/h</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
